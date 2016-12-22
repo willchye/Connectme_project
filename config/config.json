@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "Fu007888",
-    "database": "connect_db",
-    "host": "127.0.0.1",
+    "username": "dcwi02o3qs9pqub9",
+    "password": "vzb7rvtmnpq369ob",
+    "database": "nlzu7u061xe8cks9",
+    "host": "mysql://dcwi02o3qs9pqub9:vzb7rvtmnpq369ob@rtzsaka6vivj2zp1.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/nlzu7u061xe8cks9",
     "dialect": "mysql"
   },
   "test": {
