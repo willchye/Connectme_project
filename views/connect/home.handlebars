@@ -1,0 +1,143 @@
+<div class="bahhhh">
+
+    <i id=slogan>Connect.Me</i><br>
+
+
+    <span id=profile>
+  <a href="/profile"><button id="buttonclear"><img src="{{photo}}" height="35" width="35"/></button></a>
+  <strong id=slogan>{{user.firstname}} {{user.lastname}}</strong>
+  <a href="/home"><strong id=slogan>|   Home </strong>
+  <a href="/"><strong id=slogan>|   Logout</strong></a>
+</span>
+</div>
+
+
+
+
+<div class="row">
+
+    <div class="col-md-3" id=top>
+
+
+    <form action="/search" method="POST" target="_blank">
+                <br>
+                  <input type="text" placeholder="Search by firstname" id="postbar" name="searched" class="form-control" value="{{this.firstname}}"></input>
+                  <br>
+                 <button type="submit" class="btn btn-warning" id="postsubmit">submit</button>
+                
+                </form>
+
+
+
+                <br>
+                
+    </div>
+
+
+    <div class="col-md-6" id="mypage">
+      
+
+<div class="row">
+<div class="col-md-1" id=top>
+
+ <img class ="nyt" src="assets/css/newyorktimes-logo.jpg" height="40" width="40"/>
+  <img class ="nyt" src="assets/css/newyorktimes-logo.jpg" height="40" width="40"/>
+   <img class ="nyt" src="assets/css/newyorktimes-logo.jpg" height="40" width="40"/>
+</div>
+
+
+
+<div class="col-md-11" id=top>
+<div id="wrapper">
+
+<a href="/findconnections"><button type="submit" class="btn btn-success" id="findconnections">Recommend connections</button></a>
+ 
+
+  <div id="news">
+ </div>
+  <div id="news2">
+ </div>
+  <div id="news3">
+ </div>
+
+</div>
+
+
+
+        </div>
+
+       
+        
+
+
+        
+
+
+        <div id="wall">
+
+          
+            
+              
+         
+
+        </div>
+    </div>
+
+    <div class="col-md-3" id=top>
+    </div>
+</div>
+
+
+
+        
+
+
+
+
+
+<div class="col-md-2" id=sidebar>
+    <h5>My connects</h5><br> {{#each similar}}
+    {{#if this.friended}}
+
+    <div class="row">
+        <div class="col-md-10">
+            <div class="online">
+                 <form action="/connectprofile" method="POST">
+                  <input type="hidden" name="connectprofile" value="{{this.id}}"></input>
+                 <button id="buttonclear2" type="submit"><img src="{{this.photo_url}}" height="50" width="50" />{{this.firstname}} {{this.lastname}}
+                    </button>
+                </form>
+                 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <div class="online">
+                  <form action="https://hack.chat/?{{this.firstname}}{{this.lastname}}" method="GET" target="_blank">
+                  <input type="hidden" name="chat" value="{{this.firstname}}{{this.lastname}}">
+                    <button id="buttonclear2"><img src="assets/css/greendot.png" height="10" width="10"/></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    {{/if}}
+    {{/each}}
+</div>
+
+
+
+
+
+
+
+
+    </form>
+    </div>
+
+    <div id="id02" class="modal">
+
+
+     

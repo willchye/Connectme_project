@@ -1,0 +1,88 @@
+<div class="bahhhh">
+
+<i id=slogan>Connect.Me</i><br>
+
+<!-- this is the handlebar file to render the logged in home page -->
+
+<!-- the header, profile image button will route to /profile -->
+<span id=profile>
+  <a href="/profile"><button id="buttonclear"><img src="{{photo}}" height="35" width="35"/></button></a>
+  <strong id=slogan>| {{user.firstname}}{{user.lastname}}</strong>
+  <a href="/connect"><strong id=slogan>|   Home </strong>
+  <a href="/"><strong id=slogan>|   Logout</strong></a>
+</span>
+
+
+<div class="row">
+
+<div class="col-md-10" id=top>
+
+<h6>Recommended Professionals</h6>
+
+  {{#each user}}
+  {{#unless this.friended}}
+
+  <div class="box">
+
+        <img src= "{{this.photo_url}}" height="80" width="80"/>
+        <div class="boxin">
+        FirstName: {{this.firstname}}<br>
+        LastName: {{this.lastname}}<br>
+        Age: {{this.age}}<br>
+        Company: {{this.company}}<br>
+        Position:{{this.position}}<br>
+        industry: {{this.industry}}<br>
+        level: {{this.level}}
+        
+      </div>
+
+    <form action="/connect/friend" method="POST">
+        <input type="hidden" name="friended" value="{{this.id}}">
+        <button id="buttonclear" type="submit" class="addbutton"><img src="assets/css/add.png" height="20" width="20"/></button>
+    </form>
+
+
+
+
+</div>
+  {{/unless}}
+  {{/each}}
+  
+
+</div>
+
+
+
+<div class="col-md-2" id=sidebar>
+
+<h5>My connects</h5><br>
+{{#each user}}
+{{#if this.friended}}
+
+<div class="row">
+<div class="col-md-10">
+<div class="online">
+    <img src= "{{this.photo_url}}" height="35" width="35"/>
+     {{this.firstname}}
+     {{this.lastname}}
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-2">
+<div class="online">
+  <img src="assets/css/greendot.png" height="7" width="7"/>
+
+</div>
+</div>
+</div>
+</div>
+  {{/if}}
+ {{/each}}
+  </div>
+
+
+  </div>
+   
+    
+  </div>

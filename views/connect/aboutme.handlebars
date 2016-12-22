@@ -1,0 +1,109 @@
+<div class="bahhhh">
+
+    <i id=slogan>Connect.Me</i><br>
+
+
+    <span id=profile>
+  <a href="/profile"><button id="buttonclear"><img src="{{photo}}" height="35" width="35"/></button></a>
+  <strong id=slogan>{{user.firstname}} {{user.lastname}}</strong>
+  <a href="/home"><strong id=slogan>|   Home </strong>
+  <a href="/"><strong id=slogan>|   Logout</strong>
+</span>
+</div>
+
+
+
+
+<div class="row">
+
+    <div class="col-md-3" id=top>
+    </div>
+
+
+    <div class="col-md-6" id=mypage>
+        <div id="bannerdiv">
+        </div>
+
+        <div id="pic">
+            <img src="{{user.photo_url}}" height="150" width="150"/>
+        </div>
+
+        <div id="name">
+            {{user.firstname}} {{user.lastname}}
+        </div>
+
+
+
+
+        <div id="wall">
+
+            <br>
+           
+
+            <div id="wallpost">
+            <div class="row">
+            <div class="col-md-3" id=aboutleft>
+           firstname: <br>
+           lastname: <br>
+           email address: <br>
+
+           age:<br>
+           company:<br>
+           position:<br>
+           industry:<br>
+           level:<br>
+            </div>
+            <div class="col-md-5" id=aboutright>
+            <div>
+           {{user.firstname}}<br>
+           {{user.lastname}}<br>
+           {{user.email}}<br>
+
+           {{user.age}}<br>
+           {{user.company}}<br>
+           {{user.position}}<br>
+           {{user.industry}}<br>
+           {{user.level}}<br>
+           </div>
+
+        </div>
+    </div>
+
+    <div class="col-md-3" id=top>
+    </div>
+</div>
+
+
+
+        
+
+
+
+
+<div class="col-md-2" id=sidebar>
+    <h5>My connects</h5><br> {{#each similar}}
+
+    <div class="row">
+        <div class="col-md-10">
+            <div class="online">
+                <img src="{{this.photo_url}}" height="50" width="50" /> {{this.firstname}} {{this.lastname}}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <div class="online">
+                    <img src="assets/css/greendot.png" height="10" width "10"/>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    {{/each}}
+</div>
+
+
+
+
+  

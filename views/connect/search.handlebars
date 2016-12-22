@@ -1,0 +1,102 @@
+<div class="bahhhh">
+
+    <i id=slogan>Connect.Me</i><br>
+
+
+    <span id=profile>
+  <a href="/profile"><button id="buttonclear"><img src="{{photo}}" height="35" width="35"/></button></a>
+  <strong id=slogan>{{user.firstname}} {{user.lastname}}</strong>
+  <a href="/home"><strong id=slogan>|   Home </strong>
+  <a href="/"><strong id=slogan>|   Logout</strong></a>
+</span>
+</div>
+
+
+
+<div class="row">
+
+    <div class="col-md-3" id=top>
+
+
+   
+
+
+
+    </div>
+
+
+    <div class="col-md-6" id=mypage>
+      <h6>Recommended Professionals</h6>
+
+  {{#each similar}}
+
+
+  <div class="box">
+
+        <img src= "{{this.photo_url}}" height="80" width="80"/>
+        <div class="boxin">
+        FirstName: {{this.firstname}}<br>
+        LastName: {{this.lastname}}<br>
+        Age: {{this.age}}<br>
+        Company: {{this.company}}<br>
+        Position:{{this.position}}<br>
+        industry: {{this.industry}}<br>
+        level: {{this.level}}
+        
+      </div>
+
+    <form action="/connect/update/{{this.id}}" method="POST">
+        <input type="hidden" name="friended" value="true">
+        <button id="buttonclear" type="submit" class="addbutton" action="/connect/profile"><img src="assets/css/add.png" height="20" width="20"/></button>
+    </form>
+
+
+
+
+</div>
+  {{/each}}
+        </div>
+
+       
+        
+
+
+        
+
+
+        <div id="wall">
+
+          
+            
+              
+         
+
+        </div>
+    </div>
+
+    <div class="col-md-3" id=top>
+    </div>
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+    </form>
+    </div>
+
+    <div id="id02" class="modal">
+
+
+     

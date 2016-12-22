@@ -1,0 +1,219 @@
+<div class="bahhhh">
+
+    <i id=slogan>Connect.Me</i><br>
+
+
+    <span id=profile>
+  <button id="buttonclear"><img src="{{photo}}" height="35" width="35"/></button>
+  <strong id=slogan>{{firstname}} {{lastname}}</strong>
+  <a href="/connect"><strong id=slogan>|   Home </strong>
+  <a href="/"><strong id=slogan>|   Logout</strong></a>
+</span>
+</div>
+
+
+
+
+<div class="row">
+
+    <div class="col-md-3" id=top>
+    </div>
+
+
+    <div class="col-md-6" id=mypage>
+        <div id="bannerdiv">
+        </div>
+
+        <div id="pic">
+            <img src="{{photo}}" height="150" width="150"/>
+        </div>
+
+        <div id="name">
+            {{firstname}} {{lastname}}
+        </div>
+
+        <div id="aboutme">
+            <a href="/aboutme"><button type="submit" id="me"> </button></a>
+            <a href="/connections"><button type="submit" id="connection"> </button></a>
+            <button onclick="document.getElementById('id01').style.display='block'"  id="update"></button>
+        </div>
+
+
+
+
+        <div id="wall">
+
+            <br>
+            <form action="/profile/wallpost" method="POST">
+            <input type="text" placeholder="Share something" name="wallpost" id="postbar" class="form-control" required>
+            <br>
+            <button type="submit" class="btn btn-warning" id="postsubmit">submit</button>
+            </form>
+
+              
+            <div id="wallpost">
+            <div class="row">
+            <div class="col-md-3" id=aboutleft>
+           firstname: <br>
+           lastname: <br>
+           email address: <br>
+
+           age:<br>
+           company:<br>
+           position:<br>
+           industry:<br>
+           level:<br>
+            </div>
+            <div class="col-md-9" id=aboutright>
+            <div>
+           {{firstname}}<br>
+           {{lastname}}<br>
+           {{email}}<br>
+
+           {{age}}<br>
+           {{company}}<br>
+           {{position}}<br>
+           {{industry}}<br>
+           {{level}}<br>
+           </div>
+
+        </div>
+    </div>
+
+        </div>
+    </div>
+
+    <div class="col-md-3" id=top>
+    </div>
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+
+<div id="id01" class="modal" >
+
+    <form class="modal-content animate" class="create-update-form" action="/profile/updateinfo" method="POST">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                </div>
+
+
+
+                <div class="row">
+
+                    <div class="col-md-3" id=signup>
+                        <div class="container">
+                        
+
+                        <!--     <label><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="password" required> -->
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <button type="submit" class="btn btn-warning" id="butt">submit</button>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="col-md-3">
+                        <div class="container">
+                            <div class="form-group">
+
+                                <label for="ca">First name</label><br>
+                                <input type="text" id="ca" name="firstname"><br>
+
+                                <label for="ca">Last name</label><br>
+                                <input type="text" id="ca" name="lastname"><br>
+
+                                <label for="ca">Age</label><br>
+                                <input type="text" id="ca" name="age"><br>
+
+
+                                <label for="ca">company</label><br>
+                                <input type="text" id="ca" name="company"><br>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4" id=top>
+                        <div class="container">
+
+                            Position
+                            <select data-placeholder="" class="chosen-select" id="q1" name="position">
+          <option value=""></option>
+            <option value="administration"> Administration </option>
+            <option value="operations"> Operations </option>
+            <option value="finance/accounting"> Finance/Accounting </option>
+            <option value="management"> Management </option>
+            <option value="engineering"> Engineering </option>
+            <option value="marketing and sales"> Marketing and Sales </option>
+            <option value="human resources"> Human Resources </option>
+            <option value="purchasing"> Purchasing </option>
+            <option value="other position"> Other position </option>
+          </select> industry
+                            <select data-placeholder="" class="chosen-select" id="q1" name="industry">
+        <option value=""></option>
+          <option value="technology"> Technology </option>
+          <option value="finance"> Finance </option>
+          <option value="manufacturing"> Manufacturing </option>
+          <option value="healthcare"> Healthcare</option>
+          <option value="retail"> Retail </option>
+          <option value="education"> Education </option>
+          <option value="arts and recreation"> Arts and Recreation </option>
+          <option value="other services"> Other services </option>
+        </select> level
+                            <select data-placeholder="" class="chosen-select" id="q1" name="level">
+          <option value=""></option>
+              <option value="intern"> intern </option>
+              <option value="junior"> junior </option>
+              <option value="intermediate"> intermediate </option>
+              <option value="senior"> senior </option>
+              <option value="manager/director"> manager/director </option>
+              <option value="executive"> executive </option>
+            </select> Link to Professional Photo (Required)
+                            <input type="text" name="photo" id="photo" class="form-control" required>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+    </form>
+    </div>
+
+    <div id="id02" class="modal">
+
+
+        <form class="modal-content animate" class="create-update-form" action="connect/create" method="POST">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
