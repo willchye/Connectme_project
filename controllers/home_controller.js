@@ -10,7 +10,7 @@ router.get('/', function (req, res) {
     }).then(function(logged_in) {
         current_user = logged_in;
         return models.user.findAll({
-            where: {position: logged_in.position, industry: logged_in.industry, level: logged_in.level,
+            where: {friended: true,
                 id: {
                     $ne: logged_in.id
                 }

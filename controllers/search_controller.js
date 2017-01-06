@@ -5,33 +5,49 @@ var models = require('../models');
 
 router.post('/', function (req, res) {
     var current_user;
-    console.log("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
-    console.log(req.body.searched);
-    models.user.findAll({
-        where: {
-            firstname: req.body.searched
-        }
-    }).then(function(users) {
+    models.user.findOne({
+       where:{ id: req.session.userid}
+    }).then(function(logged_in) {
+        current_user = logged_in;
+        return models.user.findAll({
+            where: {firstname:req.body.searched,
+                id: {
+                    $ne: logged_in.id
+                }
+            }
+        })  
+    })
+  .then(function(users) {
     // var candidates =[];
     // for ()
 
     return res.render('connect/search', {
-        firstname: users.firstname,
-        lastname: users.lastname,
-        photo: users.photo_url,
-        wallpost: users.wallpost,
-        email: users.email,
-        age: users.age,
-        company: users.company,
-        position: users.position,
-        industry: users.industry,
-        level: users.level, 
-        logged_in:users.logged_in,
+        name: req.session.name,
+        lastname: req.session.lastname,
+        email:req.session.email,
+        photo:req.session.photo,
+        logged_in:req.session.logged_in,
         similar:users,
         user:current_user
+
     });
-   });
- });
+  });
+});
+
+
+
+
+router.post('/friend', function(req,res){
+    return models.user.update({
+        friended:true
+    },
+    {where:{id:req.body.friended}
+    })
+    .then(function(friend){
+        res.redirect('/search');
+    })
+})
+
 
 
 module.exports = router;

@@ -11,16 +11,16 @@
   <a href="/home"><strong id=slogan>|   Home </strong>
   <a href="/"><strong id=slogan>|   Logout</strong></a>
 </span>
-
+</div>
 
 <div class="row">
 
-<div class="col-md-10" id=top>
+<div class="col-md-10" id="top">
 
 <h6>Recommended Professionals</h6>
 
   {{#each similar}}
-  {{#unless this.friended}}
+
 
   <div class="box">
 
@@ -45,7 +45,7 @@
 
 
 </div>
-  {{/unless}}
+
   {{/each}}
   
 
@@ -53,38 +53,8 @@
 
 
 
-<div class="col-md-2" id=sidebar>
 
-<h5>My connects</h5><br>
-{{#each similar}}
-{{#if this.friended}}
 
-<div class="row">
-<div class="col-md-10">
-            <div class="online">
-                 <form action="/connectprofile" method="POST">
-                  <input type="hidden" name="connectprofile" value="{{this.id}}"></input>
-                 <button id="buttonclear2" type="submit"><img src="{{this.photo_url}}" height="50" width="50" />{{this.firstname}} {{this.lastname}}
-                    </button>
-                </form>
-                 
-            </div>
-        </div>
-
-<div class="row">
-            <div class="col-md-2">
-                <div class="online">
-                  <form action="https://hack.chat/?{{this.firstname}}{{this.lastname}}" method="GET" target="_blank">
-                  <input type="hidden" name="chat" value="{{this.firstname}}{{this.lastname}}">
-                    <button id="buttonclear2"><img src="assets/css/greendot.png" height="10" width="10"/></button>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-</div>
-  {{/if}}
- {{/each}}
   </div>
 
 

@@ -13,7 +13,7 @@ router.get('/', function (req, res) {
     }).then(function(logged_in) {
         current_user = logged_in;
         return models.user.findAll({
-            where: {position: logged_in.position, industry: logged_in.industry, level: logged_in.level,
+            where: {friended: true,
                 id: {
                     $ne: logged_in.id
                 }
@@ -25,12 +25,12 @@ router.get('/', function (req, res) {
     // for ()
 
     return res.render('connect/aboutme', {
-    	name: req.session.name,
-    	lastname: req.session.lastname,
-    	photo: req.session.photo,
-    	wallpost: req.session.wallpost,
+        name: req.session.name,
+        lastname: req.session.lastname,
+        photo: req.session.photo,
+        wallpost: req.session.wallpost,
         logged_in:req.session.logged_in,
-        similar:users,
+        similar:users,  
         user:current_user
     });
    });

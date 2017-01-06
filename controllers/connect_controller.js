@@ -57,19 +57,7 @@ router.get('/', function (req, res) {
 //     });
 // });
 
-router.post('/update/:id', function(req, res){
-   
-    models.user.findOne(
-    {
-    where: { id : req.params.id}
-    })
-    .then(function(user){
-    
-    user.friended = req.body.friended;
 
-    res.redirect("/connect");
-    })
-});
 // router.put('/update/:id', function(req, res) {
 //     var condition = 'id = ' + req.params.id;
 
@@ -99,12 +87,6 @@ router.post('/friend', function(req,res){
     })
 })
 
-router.delete('/delete/:id', function(req, res) {
-    var condition = 'id = ' + req.params.id;
 
-    models.connect.delete(condition, function() {
-        res.redirect('/findconnections');
-    });
-});
 
 module.exports = router;

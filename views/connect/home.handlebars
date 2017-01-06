@@ -3,7 +3,7 @@
     <i id=slogan>Connect.Me</i><br>
 
 
-    <span id=profile>
+<span id=profile>
   <a href="/profile"><button id="buttonclear"><img src="{{photo}}" height="35" width="35"/></button></a>
   <strong id=slogan>{{user.firstname}} {{user.lastname}}</strong>
   <a href="/home"><strong id=slogan>|   Home </strong>
@@ -19,7 +19,7 @@
     <div class="col-md-3" id=top>
 
 
-    <form action="/search" method="POST" target="_blank">
+    <form action="/search" method="POST">
                 <br>
                   <input type="text" placeholder="Search by firstname" id="postbar" name="searched" class="form-control" value="{{this.firstname}}"></input>
                   <br>
@@ -38,33 +38,31 @@
       
 
 <div class="row">
-<div class="col-md-1" id=top>
-
- <img class ="nyt" src="assets/css/newyorktimes-logo.jpg" height="40" width="40"/>
-  <img class ="nyt" src="assets/css/newyorktimes-logo.jpg" height="40" width="40"/>
-   <img class ="nyt" src="assets/css/newyorktimes-logo.jpg" height="40" width="40"/>
-</div>
 
 
 
 <div class="col-md-11" id=top>
+<a href="/findconnections"><button type="submit" class="btn btn-success" id="findconnections">Recommend connections</button></a>
+{{#each similar}}
 <div id="wrapper">
 
-<a href="/findconnections"><button type="submit" class="btn btn-success" id="findconnections">Recommend connections</button></a>
- 
 
-  <div id="news">
- </div>
-  <div id="news2">
- </div>
-  <div id="news3">
- </div>
+
+ <form action="/connectprofile" method="POST">
+                 <input type="hidden" name="connectprofile" value="{{this.id}}"></input>
+                <button id="buttonclear2" type="submit"> <img src="{{this.photo_url}}" height="50" width="50" />{{this.firstname}}{{this.lastname}}         {{this.wallpost}}
+                   </button>
+               </form>
 
 </div>
 
 
+{{/each}}
+</div>
 
-        </div>
+
+
+
 
        
         
@@ -73,7 +71,7 @@
         
 
 
-        <div id="wall">
+<div id="wall">
 
           
             
