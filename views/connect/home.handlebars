@@ -44,18 +44,19 @@
 <div class="col-md-11" id=top>
 <a href="/findconnections"><button type="submit" class="btn btn-success" id="findconnections">Recommend connections</button></a>
 {{#each similar}}
-<div id="wrapper">
 
+    <div id="wrapper">
 
+        <form action="/connectprofile" method="POST">
+            <input type="hidden" name="connectprofile" value="{{this.id}}"></input>
+                <button id="buttonclear2" type="submit"> 
+                    <img src="{{this.photo_url}}" height="50" width="50" />
+                        {{this.firstname}} {{this.lastname}}: {{this.wallpost}}
+                        
+                </button>
+        </form>
 
- <form action="/connectprofile" method="POST">
-                 <input type="hidden" name="connectprofile" value="{{this.id}}"></input>
-                <button id="buttonclear2" type="submit"> <img src="{{this.photo_url}}" height="50" width="50" />{{this.firstname}}{{this.lastname}}         {{this.wallpost}}
-                   </button>
-               </form>
-
-</div>
-
+    </div>
 
 {{/each}}
 </div>
