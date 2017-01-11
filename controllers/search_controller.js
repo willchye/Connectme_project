@@ -44,7 +44,9 @@ router.post('/friend', function(req,res){
     {where:{id:req.body.friended}
     })
     .then(function(friend){
+
         res.redirect('/home');
+
     })
 })
 
