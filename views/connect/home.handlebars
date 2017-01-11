@@ -35,26 +35,61 @@
 
 
 <div class="col-md-6" id="mypage">
-      
 
-<div class="col-md-11" id=top>
+
+<div class="col-md-12" id=top>
 <a href="/findconnections"><button type="submit" class="btn btn-success" id="findconnections">Recommend connections</button></a>
+<a href="https://chatapp-connectme.herokuapp.com/" target="_blank"><button type="submit" class="btn btn-primary" id="chatapp" >Public Chatroom</button></a>
 <div class="row">
 <div class="col-mid-1" id="top">
-    
-    
-    
+
+
+
+
+<div id="newsection">
+    <h5>Newsfeeds</h5>
 <div id="news">
+<div class="row">
+<div class="col-md-1">
 <img class ="nyt" src="assets/css/newyorktimes-logo.jpg" height="40" width="40"/>
 </div>
-<div id="news2">
-<img class ="nyt" src="assets/css/newyorktimes-logo.jpg" height="40" width="40"/>
+<div class="col-md-4" id="newsimg">
 </div>
-<div id="news3">
-<img class ="nyt" src="assets/css/newyorktimes-logo.jpg" height="40" width="40"/>
+<div class="col-md-7" id="newscontent">
+</div>
 </div>
 </div>
 
+<div id="news2">
+<div class="row">
+<div class="col-md-1">
+<img class ="nyt" src="assets/css/newyorktimes-logo.jpg" height="40" width="40"/>
+</div>
+<div class="col-md-4" id="newsimg2">
+</div>
+<div class="col-md-7" id="newscontent2">
+</div>
+</div>
+</div>
+
+<div id="news3">
+<div class="row">
+<div class="col-md-1">
+<img class ="nyt" src="assets/css/newyorktimes-logo.jpg" height="40" width="40"/>
+</div>
+<div class="col-md-4" id="newsimg3">
+</div>
+<div class="col-md-7" id="newscontent3">
+</div>
+</div>
+</div>
+
+</div>
+
+
+
+<div id="newsection">
+    <h5>Connectionfeeds</h5>
 
 {{#each similar}}
 {{#if this.wallpost}}
@@ -76,7 +111,7 @@
 </div>
 
 
-
+</div>
 
 
        
@@ -86,19 +121,7 @@
         
 
 
-<div id="wall">
 
-          
-            
-              
-         
-
-        </div>
-    </div>
-
-    <div class="col-md-3" id=top>
-    </div>
-</div>
 
 
 
@@ -129,7 +152,7 @@
                 <div class="online">
                   <form action="https://hack.chat/?{{this.firstname}}{{this.lastname}}" method="GET" target="_blank">
                   <input type="hidden" name="chat" value="{{this.firstname}}{{this.lastname}}">
-                    <button id="buttonclear2"><img src="assets/css/greendot.png" height="10" width="10"/></button>
+                  <!--   <button id="buttonclear2"><img src="assets/css/greendot.png" height="10" width="10"/></button> -->
                     </form>
                 </div>
             </div>

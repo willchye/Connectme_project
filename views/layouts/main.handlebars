@@ -38,13 +38,13 @@ Here is the main HTML where handlebars will render to
      .done(function(response){
          var pic = response.response.docs[0].multimedia[0].url
        var frontUrl = "https://static01.nyt.com/";
-       $("#news").append("<img src="+ frontUrl+response.response.docs[0].multimedia[0].url+">");
-         $("#news").append("<p>"+response.response.docs[0].abstract +"</p>");         
+       $("#newsimg").append("<img src="+ frontUrl+response.response.docs[0].multimedia[0].url+">");
+         $("#newscontent").append("<p>"+response.response.docs[0].abstract +"</p>");         
        console.log(response.response.docs[0]);
-        $("#news2").append("<img src="+ frontUrl+response.response.docs[1].multimedia[0].url+">");
-        $("#news2").append("<p>"+response.response.docs[1].abstract + "</p>");
-        $("#news3").append("<img src="+ frontUrl+response.response.docs[2].multimedia[0].url+">");
-         $("#news3").append("<p>"+response.response.docs[2].snippet + "</p>");
+        $("#newsimg2").append("<img src="+ frontUrl+response.response.docs[1].multimedia[0].url+">");
+        $("#newscontent2").append("<p>"+response.response.docs[1].abstract + "</p>");
+        $("#newsimg3").append("<img src="+ frontUrl+response.response.docs[2].multimedia[0].url+">");
+         $("#newscontent3").append("<p>"+response.response.docs[2].snippet + "</p>");
 
 
      })

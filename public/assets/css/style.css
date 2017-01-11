@@ -42,11 +42,7 @@ h1{
 #title{
   color:white;
   font-size:30px;
-  background-color:
-
-
-
-#163236;
+  background-color:#1d3541;
   width:90%;
   height:5%;
   border-radius: 5px;
@@ -57,7 +53,12 @@ h1{
 
 #slogan{
   color:white;
-  margin-left:10%;;
+  margin-left:10%;
+}
+#slogan2{
+  color:white;
+  margin-bottom:50%;
+  
 }
 .container{
   position:relative;
@@ -74,9 +75,18 @@ h1{
 #163236;
   border:
 #163236;
-
+width:100%;
+font-size:10px;
 
 }
+#buttah{
+  background-color:white;
+  border:white;
+  color:black;
+  font-size:10px;
+  width:100%;
+}
+
 /*.signuppage button {
     background-color: #4CAF50;
     color: white;
@@ -168,10 +178,10 @@ h1{
 .modal-1 {
     /*background-color: #fefefe;*/
     margin: 15% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
-    width: 70%; /* Could be more or less, depending on screen size */
-   /* background-color:#bababb;*/
-    opacity:0.8;
+    border: 1px solid white;
+    width: 55%; /* Could be more or less, depending on screen size */
+    background-color:rgba(233, 233, 233, 0.36);
+    
     border-radius:10px;
 
 }
@@ -474,8 +484,9 @@ h1{
     border: 0px #e7e9ec solid;
 }
 #signin{
-  border-right: 1px grey solid;
+  border-right: 1px white solid;
   line-height: 20px;
+
 }
 #linkedin{
   margin-left:10px;
@@ -531,14 +542,15 @@ h1{
   margin-bottom:20px;
 }
 #news, #news2, #news3{
- margin:10px;
- margin-bottom:10px;
- font-size:16px;
+ margin:5px;
+
+ font-size:14px;
  overflow:hidden;
  padding:2px;
  background-color:#eeeeee ;
  padding-left:10px;
- padding-right:10px;
+ padding-right:10px
+ border-radius:4px;;
 }
 #news p, #news2 p, #news3 p {
  float:right;
@@ -548,9 +560,13 @@ h1{
    float:left;
 
 }
+#newsimg, #newscontent, #newsimg2, #newscontent2, #newsimg3, #newscontent3{
+margin-top:15px;
+margin-bottom:10px;
+}
 .nyt{
- margin-bottom:130px;
- margin-top:90px;
+ margin-bottom:30px;
+ margin-top:60px;
  border: 0.5px solid black;
 }
 
@@ -565,3 +581,24 @@ h1{
   font-size:16px;
 }
 
+#newsection{
+  border: 1px solid grey;
+  padding:10px;
+}
+#chatapp{
+  margin-left:100px;
+  margin-top: 20px;
+  margin-bottom:20px;
+  width:200px;
+}
+.ps{
+  color:white;
+}
+#signinform{
+  width:100%;
+}
+.miggy img{
+  position:relative;
+  right:33%;
+  top:70px
+}

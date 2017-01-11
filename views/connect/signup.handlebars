@@ -1,5 +1,5 @@
 <video id="my-video" class="video" autoplay="autoplay" loop="loop" muted="" width="300" height="150">
-<source src="assets/typing.mp4" type="video/mp4">
+<source src="assets/fotolia.mp4" type="video/mp4">
   </video>
 
 
@@ -11,11 +11,14 @@
         <span class="element"></span></h1>
     <i id="slogan">a platform to network with professional individuals</i>
 
-    <form action="/log_in" method="POST">
-        <div class="row">
-            <div class="col-md-4" id="signin">
+
+
+<div class="row">
+
+<div class="col-md-5" id="signin">
+    <form action="/log_in" method="POST" id="signinform">
                 <div class="container">
-                    <label class="inputs"><b>Email</b></label>
+                    <label class="inputs" width="10px"><b>Email</b></label>
                     <input type="text" placeholder="Enter Email" name="email" required><br>
 
                     <label class="inputs"><b>Password</b></label>
@@ -23,27 +26,26 @@
 
                     <button type="submit" class="btn btn-warning" id="butt" class="butt1">Login</button>
                     <input type="checkbox" checked="checked"> Remember me <br>
+
+
+                    <span class="ps">Forgot</span> <a href="#">password?</a>
+                         <button onclick="document.getElementById('id01').style.display='block'" class="btn btn-warning" id="buttah">Sign Up</button>
                 </div>
+                </form>
+                </div>
+                    
+               
 
-                <div class="container">
-                    <span class="psw">Forgot <a href="#">password?</a>
-    <button onclick="document.getElementById('id01').style.display='block'" class="btn btn-warning" id="buttah">Sign Up</button>
 
-
-
-</form>
+  <div class="col-md-6" id="linkedin">
+  <i id="slogan2">Connect Me is a social media platform served for working professions to find networks in their field, industry, interest. You can catch trending stuff on here, the news, fashion, and get the latest information on industry news. On Connect Me you can also join public chat groups to chat with the people in your field. Sign on now to start networking!</i>
+  <button onclick="document.getElementById('id02').style.display='block'"  id="buttonclear" class="miggy"><img src="/assets/css/linkedinbutton.png" height="35%" width="35%" /></button>
 </div>
 
 
 </div>
 
-  <div class="col-md-5" id="linkedin">
-  <button onclick="document.getElementById('id02').style.display='block'"  id="buttonclear"><img src="/assets/css/linkedinbutton.png" height="50%" width="50%"/></button>
-</div>
 
-
-
-</div>
 
 
 
