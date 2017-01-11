@@ -34,17 +34,30 @@
     </div>
 
 
-    <div class="col-md-6" id="mypage">
+<div class="col-md-6" id="mypage">
       
-
-<div class="row">
-
-
 
 <div class="col-md-11" id=top>
 <a href="/findconnections"><button type="submit" class="btn btn-success" id="findconnections">Recommend connections</button></a>
-{{#each similar}}
+<div class="row">
+<div class="col-mid-1" id="top">
+    
+    
+    
+<div id="news">
+<img class ="nyt" src="assets/css/newyorktimes-logo.jpg" height="40" width="40"/>
+</div>
+<div id="news2">
+<img class ="nyt" src="assets/css/newyorktimes-logo.jpg" height="40" width="40"/>
+</div>
+<div id="news3">
+<img class ="nyt" src="assets/css/newyorktimes-logo.jpg" height="40" width="40"/>
+</div>
+</div>
 
+
+{{#each similar}}
+{{#if this.wallpost}}
     <div id="wrapper">
 
         <form action="/connectprofile" method="POST">
@@ -58,6 +71,7 @@
 
     </div>
 
+{{/if}}
 {{/each}}
 </div>
 
@@ -134,7 +148,7 @@
 
 
     </form>
-    </div>
+</div>
 
     <div id="id02" class="modal">
 
